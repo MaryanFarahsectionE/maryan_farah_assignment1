@@ -1,0 +1,233 @@
+body {
+    background: linear-gradient(135deg, #990000, #330000);
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    
+}
+body::before {
+    content: '';
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:url('realistic-fog-background_23-2149115275.avif');
+    background-size:cover;
+    background-position:center;
+    opacity:0.6;
+    z-index: -1;
+}
+
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    padding: 2px 0;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: #e6b422;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.film-section {
+    margin-bottom: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 25px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.film-section:hover {
+    transform: translateY(-10px);
+}
+
+.film-section h2 {
+    color: #e62429;
+    margin-bottom: 20px;
+}
+
+.movie-poster, .movie-trailer {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    margin: 20px auto;
+    border: 3px solid #e62429;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.movie-trailer {
+    aspect-ratio: 16 / 9; 
+}
+.film-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; }
+
+.film-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+}
+
+.film-item img {
+    width: 300px;
+    height: 450px; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .film-flex-container {
+        flex-direction: column;
+    }
+}
+
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #e62429;
+    border-radius: 8px;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    transition: background-color 0.2s ease-in-out;
+}
+
+form button {
+    background-color: #e62429;
+    border: none;
+    cursor: pointer;
+}
+.gun-animation {
+    max-width: 100%;
+    animation: fadeInOut 5s forwards;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.gun-animation {
+    max-width: 100%;
+    animation: fadeInOut 5s forwards;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+form input, form textarea, form button, #quiz input[type="text"], #quiz button {
+    background: #2e2e2e; 
+    color: #dcdcdc;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+form button, #quiz button {
+    background-color: #e6b422; 
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover, #quiz button:hover {
+    background-color: #d4af37; 
+}
+
+footer {
+    width: 100%;
+    background: #1c1c1c; 
+    padding: 22px; 
+    text-align: center;
+    border-top: 2px solid #444; 
+}
+
+footer p {
+    color: #dcdcdc;
+}
+
+.paragraph{
+    padding-left:10px;
+}
+
+@media screen and (max-width: 768px) {
+    header, .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
